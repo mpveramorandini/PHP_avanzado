@@ -26,6 +26,7 @@ html {
   padding: 0;
   box-sizing: border-box;
   /* border: 2px solid red; */
+
 }
 
 ul {
@@ -35,18 +36,26 @@ ul {
 a {
   text-decoration: none;
   color: var(--primary-color);
+  transition-duration: 3s;
+  transition-property: color;
 }
 
 a:hover {
-  text-decoration: none;
   color: var(--secondary-color);
 }
 
 body {
   font-family: var(--font-family);
 }
-
-
+/*para poner una foto de fondo*/
+/* .contenedor_registro{
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+} */
 /*barra de navegacion*/
 nav {
   position: sticky;
@@ -65,8 +74,8 @@ nav {
 }
 
 nav a {
-  color: var(--primary-color);
-  transition: var(--transicion);
+  /* color: var(--primary-color);
+  transition: var(--transicion); */
   text-transform: uppercase;
   font-weight: 100;
 
@@ -105,7 +114,7 @@ nav a {
 .contacto {
   max-width: 960px;
   margin: 0 auto;
-  padding-top: 2rem;
+  padding-top: 4rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -137,11 +146,10 @@ nav a {
 .formulario p input,
 .formulario p textarea {
   width: 90%;
-  border: 1px solid #5b5b5b;
+  border: 1px solid #5b5b5b; 
   font-size: 14px;
   padding: 6px 10px;
   color: #5b5b5b;
-  ;
 }
 
 .formulario textarea {
@@ -163,6 +171,8 @@ nav a {
   /*aparece la manito*/
   border-radius: 6px;
   border: #9c8c72 solid 1px;
+  transition-property: background-color;
+  transition-duration: 2s;
 }
 
 .formulario input[type="submit"]:hover {
@@ -178,3 +188,11 @@ nav a {
 .boton{
   padding-top: 2rem;
 }
+/*footer*/
+/* footer{
+  background-color: #9c8c72;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  margin: 2rem 0 0;
+}  */

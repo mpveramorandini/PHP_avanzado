@@ -1,5 +1,5 @@
 <h1 class="tituloPagina">Registro</h1>
-
+ <!-- <div  class="contenedor_registro" style="background-image:url(./public/img/condor.jpg)"> -->
 <div class="contacto">
                 
                     <form action="" method="post" class="formulario">
@@ -21,7 +21,8 @@
                         </p>
                     </form>
  </div> 
-
+</div>
 
 </body>
+
 </html>

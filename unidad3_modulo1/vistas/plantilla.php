@@ -43,6 +43,7 @@ if(isset($_GET["ruta"])){
     }
 
 ?>
+
 </section>
 
 </div>
