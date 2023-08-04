@@ -1,0 +1,198 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,700&display=swap");
+
+/* Variables */
+:root {
+  --font-family: "Work Sans", Sans-serif;
+  --normal-font: 400;
+  --bold-font: 700;
+  --bolder-font: 900;
+  --bg-color: white;
+  --primary-color: #9c8c72;
+  --secondary-color: #464342;
+  --primary-shadow: #8b8eaf;
+  --secondary-shadow: #624234;
+  --bottom-margin: 0.5rem;
+  --bottom-margin-2: 1rem;
+  --line-height: 1.7rem;
+  --transition: 0.3s;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: 2px solid red; */
+
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+  transition-duration: 3s;
+  transition-property: color;
+}
+
+a:hover {
+  color: var(--secondary-color);
+}
+
+body {
+  font-family: var(--font-family);
+}
+/*para poner una foto de fondo*/
+/* .contenedor_registro{
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+} */
+/*barra de navegacion*/
+nav {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  /*La propiedad de  z-index con el valor de 1  se asegura de que la barra de navegación se muestre
+     sobre cualquier otro elemento de la página web*/
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 2rem 2rem 6rem;
+  background-color: var(--bg-color);
+  border-bottom: solid 1px #9c8c72;
+
+}
+
+nav a {
+  /* color: var(--primary-color);
+  transition: var(--transicion); */
+  text-transform: uppercase;
+  font-weight: 100;
+
+}
+
+ nav ul {
+  display: flex;
+  gap: 1.9rem;
+} 
+
+/* nav ul li {
+    font-weight: var( --bolder-font); 
+  }  */
+
+
+  /* nav a.activo{
+    color: var(--secondary-color);
+   } */
+
+.tituloPagina {
+  color: #5b5b5b;
+  padding: 3px;
+  background-color: var(--bg-color);
+  padding: 2rem 6rem;
+  text-align: left;
+  background-color: rgba(156, 140, 114, 0.34);
+  font-size: 22px;
+  font-weight: 100px;
+  font: 1em sans-serif;
+  text-transform: uppercase;
+  line-height: 1.3;
+  font-weight: 500;
+}
+
+/*formulario*/
+.contacto {
+  max-width: 960px;
+  margin: 0 auto;
+  padding-top: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 24px;
+  color: rgb(81, 80, 80);
+}
+
+.formulario {
+  width: 40%;
+}
+
+.formulario p {
+  display: block;
+  font-size: 15px;
+}
+
+.formulario p label {
+  min-width: 80px;
+  /*espacio minimo que ocupa el label*/
+  display: flex;
+  /*caja contenedora*/
+  align-items: center;
+  /*para que quede la etiqueta en el medio de la caja*/
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}
+
+.formulario p input,
+.formulario p textarea {
+  width: 90%;
+  border: 1px solid #5b5b5b; 
+  font-size: 14px;
+  padding: 6px 10px;
+  color: #5b5b5b;
+}
+
+.formulario textarea {
+  resize: none;
+  /*deja fijo el tamaño del area*/
+  height: 150px;
+}
+
+.formulario input[type="submit"], .formulario button[type="submit"] {
+  background: #9c8c72;
+  color: white;
+  font-size: 16px;
+  padding: 12px 20px;
+  width: auto;
+  /*ancho del boton*/
+  left: 5rem;
+  /*alineacion*/
+  cursor: pointer;
+  /*aparece la manito*/
+  border-radius: 6px;
+  border: #9c8c72 solid 1px;
+  transition-property: background-color;
+  transition-duration: 2s;
+}
+
+.formulario input[type="submit"]:hover {
+  background-color: #9b742d;
+  /*cambia de color cuando pasa la manito*/
+}
+.formulario button[type="submit"] {
+  padding: 12px 20px;
+}
+.formulario button[type="submit"]:hover{
+  background-color: #9b742d;
+}
+.boton{
+  padding-top: 2rem;
+}
+/*footer*/
+/* footer{
+  background-color: #9c8c72;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  margin: 2rem 0 0;
+}  */
