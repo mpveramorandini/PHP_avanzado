@@ -47,9 +47,9 @@ class ModeloFormularios
 
 			$stmt->execute();
 
-			return $stmt->fetch();
+			return $stmt->fetch();		$stmt->closeCursor();
+
 		}
-		$stmt->close();
 
 		$stmt = null;
 	}
@@ -103,4 +103,5 @@ class ModeloFormularios
 
 	}
 }
+
 

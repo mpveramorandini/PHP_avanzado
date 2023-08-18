@@ -5,7 +5,7 @@
     <form action="" method="post" class="formulario">
         
             <p>
-                <label for="nombre">Nombre:</label>
+                <label for="nombre">Usuario:</label>
                 <input type="text" name="registroNombre" id="nombre">
             </p>
             <p>

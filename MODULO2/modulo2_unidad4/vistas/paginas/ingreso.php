@@ -4,8 +4,8 @@
     <form action="" method="post" class="formulario">
 
         <p>
-            <label for="email">Email:</label>
-            <input type="text" name="ingresoEmail" id="email">
+            <label for="nombre">Usuario:</label>
+             <input type="text" name="ingresoNombre" id="nombre"> <!--ver -->
         </p>
         <p>
             <label for="pwd">Contraseña</label>

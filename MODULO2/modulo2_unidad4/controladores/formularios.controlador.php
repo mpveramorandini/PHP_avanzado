@@ -9,34 +9,24 @@ class ControladorFormularios
 	{
 
 		if (isset($_POST["registroNombre"])) {
-			if(preg_match('/^[a-zA-ZñÑáéíóúÁÉÍÓÚ ]+$/', $_POST["registroNombre"]) &&
-			preg_match('/^[^0-9][a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[@][a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{2,4}$/', $_POST["registroEmail"]) &&
-			preg_match('/^[0-9a-zA-Z]+$/', $_POST["registroPassword"])){
+
 			$tabla = "registros";
-			
-			$encriptarPassword = crypt($_POST["registroPassword"], '$2a$07$asxx54ahjppf45sd87a5a4dDDGsystemdev$');
 
 			$datos = array(
 				"nombre" => $_POST["registroNombre"],
 				"email" => $_POST["registroEmail"],
-				"password" => $encriptarPassword
+				"password" => $_POST["registroPassword"]
 			);
 
 			$respuesta = ModeloFormularios::mdlRegistro($tabla, $datos);
 
-			return $respuesta;		
-		}else{
-
-				$respuesta = "error";
-
-				return $respuesta;
-
-			}
+			return $respuesta;
 		}
 	}
 
 	// Seleccionar registros
-	static public function ctrSeleccionarRegistros($item, $valor) {
+	static public function ctrSeleccionarRegistros($item, $valor)
+	{
 
 		$tabla = "registros";
 
@@ -50,17 +40,15 @@ class ControladorFormularios
 	public function ctrIngreso()
 	{
 
-		if (isset($_POST["ingresoEmail"])) {
+		if (isset($_POST["ingresoNombre"])) {
 
 			$tabla = "registros";
-			$item = "email";
-			$valor = $_POST["ingresoEmail"];
+			$item = "nombre";
+			$valor = $_POST["ingresoNombre"];
 
 			$respuesta = ModeloFormularios::mdlSeleccionarRegistros($tabla, $item, $valor);
 
-			$encriptarPassword = crypt($_POST["ingresoPassword"], '$2a$07$asxx54ahjppf45sd87a5a4dDDGsystemdev$');
-
-			if ($respuesta["email"] == $_POST["ingresoEmail"] && $respuesta["password"] == $encriptarPassword) {
+			if ($respuesta["nombre"] == $_POST["ingresoNombre"] && $respuesta["password"] == $_POST["ingresoPassword"]) {
 
 				$_SESSION["validarIngreso"] = "ok";
 
@@ -163,5 +151,4 @@ class ControladorFormularios
 			}
 		}
 	}
-
 }

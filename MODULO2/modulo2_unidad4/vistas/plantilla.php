@@ -10,35 +10,26 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/estilos.css" rel="stylesheet" />
-    <title>Sistema de Administración</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Login</title>
 </head>
 
-<!--Botonera-->
-<section id="contenedor">
-    <header>
-        <!-- VARIABLES GET -->
+<nav class="navegacion">
+<ul>
+  <li><a href="index.php?ruta=registro">Registro</a></li>
+  <li><a href="index.php?ruta=ingreso">Ingreso</a></li>
+  <li><a href="index.php?ruta=inicio">Inicio</a></li>
+  <li><a href="index.php?ruta=salir">Salir</a></li>
+</ul>
+</nav>
 
-        <body>
-            <nav id="botonera_principal">
-                <ul>
-                    <li> <a class="" href="index.php?ruta=registro"> Registro </a>
-                    </li>
-                    <li> <a class="" href="index.php?ruta=ingreso"> Ingreso </a>
-                    </li>
-                    <li> <a class="" href="index.php?ruta=inicio"> Inicio </a>
-                    </li>
-                    <li> <a class="" href="index.php?ruta=salir"> Salir </a>
-                    </li>
-                </ul>
-            </nav>
+<div class="marca">
+</div>
+</header>
 
-            <div id="marca">
-                <h1>Login</h1>
-            </div>
-    </header>
-
-    <!--CONTENIDO-->
-    <section id="contenido">
+<section class="contenido">
         <?php
 
         if (isset($_GET["ruta"])) {
@@ -67,6 +58,7 @@ session_start();
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="vistas/js/script.js"></script>
+
 </body>
 
 </html>

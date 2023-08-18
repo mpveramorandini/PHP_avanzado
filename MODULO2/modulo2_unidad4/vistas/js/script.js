@@ -3,7 +3,7 @@
 
 	let email = $(this).val();
 	// Para chequear que el script funciona
-	//console.log("email", email)
+	console.log("email", email)
 
 	let datos = new FormData();
 	datos.append("validarEmail", email);
