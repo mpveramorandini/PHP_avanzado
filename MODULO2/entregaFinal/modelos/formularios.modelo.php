@@ -9,7 +9,7 @@ class ModeloFormularios
 	// ------------------Insertar Registro-------------
 	static public function mdlRegistro($tabla, $datos)
 	{
-
+       
 
 		$stmt = Conexion::conectar()->prepare("INSERT INTO $tabla(nombre, email, password) VALUES (:nombre, :email, :password)");
 
@@ -33,7 +33,7 @@ class ModeloFormularios
 
 	// ------------------Seleccionar Registro-----------
 	static public function mdlSeleccionarRegistros($tabla, $item, $valor)
-	{
+	{    
 		if ($item == null && $valor == null) {
 			$stmt = Conexion::conectar()->prepare("SELECT *,DATE_FORMAT(fecha, '%d/%m/%Y') AS fecha FROM $tabla ORDER BY id DESC");
 

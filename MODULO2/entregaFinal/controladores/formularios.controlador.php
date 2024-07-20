@@ -48,7 +48,7 @@ class ControladorFormularios
 
 			$respuesta = ModeloFormularios::mdlSeleccionarRegistros($tabla, $item, $valor);
 
-			if ($respuesta["nombre"] == $_POST["ingresoNombre"] && $respuesta["password"] == $_POST["ingresoPassword"]) {
+			if ($respuesta["nombre"] === $_POST["ingresoNombre"] && $respuesta["password"] === $_POST["ingresoPassword"]) {
 
 				$_SESSION["validarIngreso"] = "ok";
 
@@ -76,7 +76,7 @@ class ControladorFormularios
 
 				</script>';
 
-				echo '<div class="alert alert-danger">Error al ingresar al sistema, el email o la contraseña no coinciden</div>';
+				echo '<div>Error al ingresar al sistema, el email o la contraseña no coinciden</div>';
 			}
 		}
 	}

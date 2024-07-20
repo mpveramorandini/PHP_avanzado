@@ -32,7 +32,7 @@ if(isset($_GET["ruta"])){
         $_GET['ruta'] == "registro" || 
         $_GET['ruta'] == "ingreso" || 
         $_GET['ruta'] == "inicio" || 
-        $_GET['ruta'] == "salir"
+        $_GET['ruta'] == ""
     ){
         include "paginas/" . $_GET["ruta"]. ".php";
     } else {

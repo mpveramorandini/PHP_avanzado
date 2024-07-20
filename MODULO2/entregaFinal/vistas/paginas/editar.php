@@ -49,7 +49,7 @@ if(isset($_GET["id"])){
 				
 					window.location = "index.php?pagina=inicio";
 
-				},3000);
+				},6000);
 
 			</script>
 
